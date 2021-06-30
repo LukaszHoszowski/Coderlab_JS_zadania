@@ -159,12 +159,10 @@ var x = document.querySelectorAll('a[href]');
 
 // Zadanie 3
 
-var home = document.getElementById('home');
-var home1 = document.querySelector('#home');
-var liElement = document
-  .getElementsByTagName('li')[0]
-  .getAttribute('data-direction');
-var block = document.getElementsByClassName('block')[0];
+// var home = document.getElementById('home');
+// var home1 = document.querySelector('#home');
+// var liElement = document.getElementsByTagName('li')[0].getAttribute('data-direction');
+// var block = document.getElementsByClassName('block')[0];
 
 // Zadanie 4
 
@@ -174,8 +172,8 @@ var allDivs = document.querySelectorAll('article div');
 
 // Zadanie 5
 
-var art = document.getElementsByTagName("article").querySelector('.first');
-var hTags = art.getElementsByTagName('h2');
+// var art = document.getElementsByTagName("article").querySelector('.first');
+// var hTags = art.getElementsByTagName('h2');
 
 // Elementy
 
@@ -191,4 +189,38 @@ function getDataInfo(elements) {
 
 // Zadanie 2
 
+function classTag () {
+	for (i = 0; i < someBlocks.length; i++) {
+  	console.log(someBlocks[i].tagName, someBlocks[i].className);
+	};
+};
 
+// Zadanie 3
+
+function setInnerText(ele) {
+  for (i = 0; i < ele.length; i++) {
+    ele[i].innerText = "Nowa wartość diva o klasie blocks";
+  };
+};
+
+// Zadanie 4
+
+const footer = document.querySelector('.superFooter');
+
+function getId(ele) {
+  return document.querySelector(`.${ele}`).id
+};
+
+// Zadanie 5
+
+function getTags(childElements) {
+  const lst = [];
+  for (i = 0; i < childElements.length; i++) {
+    lst.push(childElements[i].tagName);
+  };
+  return lst;
+};
+
+// Zadanie 6
+
+noSpace = (x) => x.split(' ').join('');

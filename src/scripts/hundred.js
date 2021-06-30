@@ -84,3 +84,78 @@ function makeNegative(num) {
 
 // #13
 
+function repeatStr(n, s) {
+  return s.repeat(n);
+};
+
+// #14
+
+repeatStr = (n, s) => s.repeat(n);
+
+// #15
+
+function numberToString(num) {
+    return String(num);
+};
+
+// #16
+
+function numberToString(num) {
+  return num.toString();
+};
+
+// #17
+
+function removeChar(str) {
+  return str
+    .split('')
+    .splice(1, str.length - 2)
+    .join('');
+}
+
+// #18
+
+function removeChar(str) {
+  return str.slice(1, -1);
+};
+
+// #19
+
+function removeChar(str){
+ return str.substring(1, str.length-1);
+};
+
+// #20
+
+function removeChar(str){
+  str1 = str.split('');
+  str1.shift();
+  str1.pop();
+  return str1.join('');
+};
+
+// #21
+
+function findSmallestInt(args) {
+  return args.sort(function (a, b) { return a - b })[0];
+};
+
+// #22
+var summation = function (num) {
+  let c = 0;
+  for (let i = 1; i <= num; i++) {
+    c += i;
+  }
+  return c;
+};
+
+// #23
+
+const summation = (n) => (n * (n + 1)) / 2;
+
+// #24
+
+noSpace = (x) => x.split(' ').join('');
+
+// #25
+
