@@ -159,3 +159,208 @@ noSpace = (x) => x.split(' ').join('');
 
 // #25
 
+const noSpace = (x) => x.replace(/ /g, '');
+
+// #26
+
+numbers = [1, 2, 2];
+
+function squareSum(numbers) {
+  return numbers.reduce((acc, num) => acc + Math.pow(num, 2), 0);
+};
+
+// #27
+
+function squareSum(numbers) {
+  var sum = 0;
+  numbers.forEach(function (n) {
+    sum += n * n;
+  });
+  return sum;
+};
+
+// #28
+
+function countSheeps(arrayOfSheep) {
+  return arrayOfSheep.filter((item) => item == true).reduce((acc, item=1) => acc + item, 0);
+};
+
+// #29
+
+function countSheeps(arrayOfSheeps) {
+  return arrayOfSheeps.filter(Boolean).length;
+};
+
+// #30
+
+let countSheeps = (x) => x.filter((s) => s).length;
+
+// #31
+
+function litres(time) {
+  return Math.floor(time * 0.5);
+};
+
+// #32
+
+litres = (t) => ~~(t / 2);
+
+// #33
+
+function litres(time) {
+  return (time / 2) | 0;
+};
+
+// #34
+
+function century(year) {
+  return Math.ceil(year / 100);
+};
+
+// #35
+
+function century(year) {
+  return ((year + 99) / 100) | 0;
+};
+
+// #36
+
+function basicOp(operation, value1, value2) {
+  if (operation == "+") {
+    return value1 + value2;
+  } else if (operation == "-") {
+    return value1 - value2;
+  } else if (operation == "*") {
+    return value1 * value2;
+  } else if (operation == "/") {
+    return value1 / value2;
+  } else {
+    return "Wrong operator";
+  };
+};
+  
+// #37
+
+function basicOp(operation, value1, value2) {
+  switch (operation) {
+    case '+':
+      return value1 + value2;
+    case '-':
+      return value1 - value2;
+    case '*':
+      return value1 * value2;
+    case '/':
+      return value1 / value2;
+    default:
+      return 'Operation must be one of + - * /';
+  }
+}
+
+// #38 Do not use
+
+function basicOp(o, a, b) {
+  return eval(a + o + b);
+}
+
+// #39
+
+var cases = {
+    '+': value1 + value2,
+    '-': value1 - value2,
+    '*': value1 * value2,
+    '/': value1 / value2
+  };
+  return cases[operation]
+
+// #40
+
+const basicOperations = {
+  '+': (a, b) => a + b,
+  '-': (a, b) => a - b,
+  '*': (a, b) => a * b,
+  '/': (a, b) => a / b,
+};
+
+const basicOp = (op, x, y) => basicOperations[op](x, y);
+
+// #41
+
+function isDivisible(n, x, y) {
+  return n % x == 0 && n % y == 0 ? true : false;
+};
+
+// #42
+
+function isDivisible(n, x, y) {
+  return !(n % x || n % y);
+};
+
+// #43
+
+var stringToNumber = function (str) {
+  return +str;
+};
+
+// #44
+
+var stringToNumber = function (str) {
+  return parseInt(str);
+};
+
+// #45
+
+function abbrevName(name) {
+  return name.split
+};
+
+// #46
+
+function abbrevName(name) {
+  const words = name.split(" ")
+  return (words[0][0] + "." + words[1][0]).toUpperCase();
+};
+
+// #47
+
+function abbrevName2(name) {
+  return name
+    .split(' ')
+    .map((i) => i[0].toUpperCase())
+    .join('.');
+};
+
+// #48
+
+function greet(name) {
+  return `Hello, ${name} how are you doing today?`;
+};
+
+// #49
+
+function findNeedle(haystack) {
+  return `found the needle at position ${haystack.indexOf("needle")}`;
+};
+
+// #50
+
+function maps(x) {
+  return x.map((y) => y * 2 );
+};
+
+// #51
+
+function digitize(n) {
+  return n = String(n).split('').reverse().map(Number);
+};
+
+// #52
+
+function doubleInteger(i) {
+  return i * 2;
+};
+
+// #53
+
+function getAverage(marks) {
+  return Math.floor(marks.reduce((a, b) => a + b, 0)/marks.length);
+};

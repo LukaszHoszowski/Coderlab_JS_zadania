@@ -60,9 +60,53 @@
 // let cary = new Car("BMW");
 // let plany = new Plane("Airbus");
 
-// boaty.swim()
-// cary.ride()
-// plany.fly()
+// boaty.swim();
+// cary.ride();
+// plany.fly();
+
+
+// class Vehicle {
+//   constructor(typeVehicle) {
+//     this.typeVehicle = typeVehicle;
+//   }
+//   describe() {
+//     return `This is type vehicle: ${this.typeVehicle}`;
+//   }
+// }
+// class Boat extends Vehicle {
+//   constructor(typeVehicle, color) {
+//     super(typeVehicle);
+//     this.color = color;
+//   }
+//   describe() {
+//     return super.describe() + 'Color: ' + this.color;
+//   }
+//   flow() {
+//     console.log(`This ${this.typeVehicle} is flowing.`);
+//   }
+// }
+// class Car extends Vehicle {
+//   constructor(typeVehicle, model) {
+//     super(typeVehicle);
+//     this.model = model;
+//   }
+//   drive() {
+//     console.log(`This ${this.typeVehicle} id drive.`);
+//   }
+// }
+// class Plane extends Vehicle {
+//   constructor(typeVehicle, number) {
+//     super(typeVehicle);
+//     this.number = number;
+//   }
+//   fly() {
+//     console.log(
+//       `${this.typeVehicle}, Fly Number: ${this.number} is flying to Maroko.`
+//     );
+//   }
+// }
+
+// let boaty = new Boat('osobowy', 'red');
 
 // Zadanie 2
 
@@ -223,4 +267,42 @@ function getTags(childElements) {
 
 // Zadanie 6
 
-noSpace = (x) => x.split(' ').join('');
+function getClassInfor(ele) {
+  return ele.className
+};
+
+// Wiecej o elementach
+
+// Zadanie 1
+
+// const o = document.querySelector('.exercise');
+
+// o.style.backgroundColor = "#9e9e9e";
+
+// Zadanie 2
+
+// Zadanie 3
+
+// Zadanie 4 
+
+// Zadanie 5
+
+//Dzein 2 praca domowa
+
+// Zadanie 1
+
+class Tree {
+  constructor(treeType) {
+    this.type = treeType;
+  };
+};
+
+let modrzew = new Tree("larch");
+
+Tree.prototype.bloom = function () {
+  return console.log("I am blooming");
+};
+
+
+// Zadanie 2
+
