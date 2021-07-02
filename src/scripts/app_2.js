@@ -306,3 +306,11 @@ Tree.prototype.bloom = function () {
 
 // Zadanie 2
 
+
+function points(games) {
+  let x = games.forEach((ele) => ele.split(':').map((x) => Number(x)));
+  return x[0] > x[1] ? 
+};
+
+
+split(':').map((x) => Number(x))
