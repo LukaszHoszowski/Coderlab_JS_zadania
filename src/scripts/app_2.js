@@ -306,11 +306,14 @@ Tree.prototype.bloom = function () {
 
 // Zadanie 2
 
-
-function points(games) {
-  let x = games.forEach((ele) => ele.split(':').map((x) => Number(x)));
-  return x[0] > x[1] ? 
+function getMiddle(s) {
+  if (s.length % 2 == 0) {
+    return s[s.length / 2 - 1] + s[s.length / 2];
+  } else {
+    if (s.length == 1) {
+      return s[0];
+    } else {
+      return s[Math.floor(s.length / 2)];
+    };
+  };
 };
-
-
-split(':').map((x) => Number(x))

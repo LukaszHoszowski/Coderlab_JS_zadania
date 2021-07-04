@@ -670,3 +670,76 @@ function getPlanetName(id) {
 // #91
 
 const points = (games) => games.split(":")
+
+// #92
+
+function points(games) {
+  var sum = 0
+  for (let i = 0; i < games.length; i++) {
+    const o = games[i].split(":");
+    sum += Number(o[0]) > Number(o[1]) ?
+      3 : Number(o[0]) < Number(o[1]) ?
+        0 : 1;      
+  };
+  return sum;
+};
+
+// #93
+
+const points = (g) => g.reduce((a, [x, _, y]) => a + (x > y ? 3 : x == y), 0);
+
+// #94
+
+function getCount(str) {
+  var vowelsCount = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (["a", "e", "i", "o", "u"].includes(str.split('')[i])) {
+      ++vowelsCount;
+    };
+  };
+  return vowelsCount;
+};
+
+// #95
+
+function getCount(str) {
+  return (str.match(/[aeiou]/gi) || []).length;
+};
+
+// #96
+
+function getCount(str) {
+  return str.split('').filter((c) => 'aeiouAEIOU'.includes(c)).length;
+};
+
+// #97
+
+function removeVowels(str) {
+  return str.replace(/[aeiou]/gi, '');
+}
+
+// #98
+
+function getMiddle(s) {
+  if (s.length % 2 == 0) {
+    return s[s.length / 2 - 1] + s[s.length / 2];
+  } else {
+    if (s.length == 1) {
+      return s[0];
+    } else {
+      return s[Math.floor(s.length / 2)];
+    };
+  };
+};
+
+// #99
+
+function getMiddle(s) {
+  return s.slice((s.length - 1) / 2, s.length / 2 + 1);
+};
+
+// #100
+
+function getMiddle(s) {
+  return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+};
